@@ -5,7 +5,7 @@ A test that can be taken on the web to test your understanding of JavaScript and
 
 Currently free of charge (one-day interval required to take the test)
 
-![Hero](/JSPCE-Hero.png)
+![Hero](/assets/JSPCE-Hero.png)
 
 ## Level
 
@@ -24,4 +24,4 @@ C. 2 questions to determine what the code is for (5 points each)
 ## Assets
 
 ### Logo
-![Logo](/JSPCE.svg)
+![Logo](/assets/JSPCE.svg)
