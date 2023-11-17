@@ -5,6 +5,9 @@ A test that can be taken on the web to test your understanding of JavaScript and
 
 ## Level
 
+- Standard
+- Advanced
+- Professional
 ## Test
 
 Maximum score is 100 points.
