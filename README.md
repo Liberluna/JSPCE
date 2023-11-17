@@ -22,4 +22,4 @@ The passing line is 75 points.
 ## Assets
 
 ### Logo
-[Logo](/JSPCE.svg)
+![Logo](/JSPCE.svg)
