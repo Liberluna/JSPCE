@@ -24,4 +24,4 @@ C. 2 questions to determine what the code is for (5 points each)
 ## Assets
 
 ### Logo
-![Logo](/assets/JSPCE.svg)
+![Logo](/assets/JSPCE.png)
