@@ -5,6 +5,8 @@ A test that can be taken on the web to test your understanding of JavaScript and
 
 Currently free of charge (one-day interval required to take the test)
 
+![Hero](/JSPCE-Hero.png)
+
 ## Level
 
 - Standard
