@@ -1,7 +1,34 @@
 ---
 import ThemeSwitch from './ThemeSwitch.astro';
 
+const menus = [
+    {
+        name: "Home",
+        path: "/",
+    },
+    {
+        name: "About",
+        path: "/about",
+    },
+    {
+        name: "Contact",
+        path: "/contact",
+    },
+];
+
 ---
-<header>
-    <ThemeSwitch />
+<header class="fixed top-0 w-full z-50 font-mont flex items-center justify-between p-4">
+    <div>
+        <img src="/favicon.png" alt="Logo" class="w-[75px] h-[75px] shadow" loading="lazy" decoding="async" fetchpriority="high" width="75" height="75" />
+    </div>
+    <div class="flex items-center gap-4 space-x-4">
+        <div class="flex items-center gap-4 space-x-4 mr-1">
+            {
+                menus.map((menu) => (
+                    <a href={menu.path} class="hover:text-gray-200 dark:hover:text-gray-200 transition duration-150" >{menu.name}</a>
+                ))
+            }
+        </div>
+        <ThemeSwitch />
+    </div>
 </header>

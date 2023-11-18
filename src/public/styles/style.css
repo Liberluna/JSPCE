@@ -1,0 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.font-mont {
+    font-family: 'Montserrat', sans-serif;
+}

@@ -3,8 +3,8 @@
 <div>
     <input type="checkbox" id="darkModeSwitch" class="hidden" />
     <label for="darkModeSwitch" class="cursor-pointer">
-        <div>
-            a
+        <div class="w-[30px] h-[30px] bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center transition duration-300">
+            <img class="switch-icon scale-[0.75] dark:invert" src="https://www.svgrepo.com/show/526333/sun-2.svg" class="w-[20px] h-[20px] dark:hidden" loading="lazy" />
         </div>
     </label>        
 </div>
@@ -16,8 +16,14 @@
     const darkModeSwitch = document.getElementById("darkModeSwitch");
     const body = document.querySelector("body");
 
+    const sunImage = "https://www.svgrepo.com/show/526333/sun-2.svg";
+    const moonImage = "https://www.svgrepo.com/show/528414/moon-stars.svg";
+
+    const switchIcon = document.querySelector(".switch-icon");
+
     if (currentTheme === "dark") {
         body.classList.add("dark");
+        switchIcon.setAttribute("src", moonImage);
     }
 
     darkModeSwitch.addEventListener("change", (e) => {
@@ -25,10 +31,12 @@
             currentTheme = "dark";
             body.classList.add("dark");
             localStorage.setItem("theme", currentTheme);
+            switchIcon.setAttribute("src", moonImage);
         }else {
             currentTheme = "light";
             body.classList.remove("dark");
             localStorage.setItem("theme", currentTheme);
+            switchIcon.setAttribute("src", sunImage);
         }
     })
 </script>
