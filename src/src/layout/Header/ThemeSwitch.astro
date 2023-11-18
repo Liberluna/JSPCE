@@ -1,15 +1,34 @@
 ---
 ---
-<div class="dark:bg-white">
+<div>
     <input type="checkbox" id="darkModeSwitch" class="hidden" />
-    <label for="darkModeSwitch" class="flex items-center cursor-pointer">
-        <span class="relative">
-            <span class="block w-10 h-6 bg-gray-400 rounded-full"></span>
-            <span class="absolute top-0 left-0 w-4 h-4 mt-1 ml-1 bg-white rounded-full transition"></span>
-        </span>
-    </label>
+    <label for="darkModeSwitch" class="cursor-pointer">
+        <div>
+            a
+        </div>
+    </label>        
 </div>
 
 <script>
-    
+    let currentTheme = localStorage.getItem("theme") || "light";
+    localStorage.setItem("theme", currentTheme);
+
+    const darkModeSwitch = document.getElementById("darkModeSwitch");
+    const body = document.querySelector("body");
+
+    if (currentTheme === "dark") {
+        body.classList.add("dark");
+    }
+
+    darkModeSwitch.addEventListener("change", (e) => {
+        if (currentTheme === "light") {
+            currentTheme = "dark";
+            body.classList.add("dark");
+            localStorage.setItem("theme", currentTheme);
+        }else {
+            currentTheme = "light";
+            body.classList.remove("dark");
+            localStorage.setItem("theme", currentTheme);
+        }
+    })
 </script>
