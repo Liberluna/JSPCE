@@ -9,9 +9,10 @@ interface Props {
 }
 
 const { title, description, image } = Astro.props as Props;
+const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
 
 ---
-<head prefix="og: http://ogp.me/ns# twitter: http://ogp.me/ns/twitter# website: http://ogp.me/ns/website#">
+<head prefix={prefix}>
    <SEO
       title="A Very Descriptive Title"
       description="A heavily optimized description full of well-researched keywords."
