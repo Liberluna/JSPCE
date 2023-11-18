@@ -1,6 +1,7 @@
 ---
 //@ts-ignore
 import { SEO as AstroSEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
     title: string;
@@ -38,4 +39,5 @@ const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
         ],
       }}
     />
+    <ViewTransitions animation="fade" />
 </head>
