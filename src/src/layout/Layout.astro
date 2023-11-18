@@ -4,6 +4,8 @@ import BaseHead from './BaseHead.astro';
 <html lang="ja">
     <BaseHead />
     <body>
-        <slot />
+        <div id="__next" style={{ display: "contents" }}>
+            <slot />
+        </div>
     </body>
 </html>
