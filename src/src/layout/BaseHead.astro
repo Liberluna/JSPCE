@@ -15,27 +15,25 @@ const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
 <head prefix={prefix}>
    <SEO
       title={title}
-      description="A heavily optimized description full of well-researched keywords."
+      description={description}
       openGraph={{
         basic: {
           title: {title},
-          type: "A type.",
-          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          type: "website",
+          image: {image},
         }
       }}
       twitter={{
         creator: "@jonasmerlins1"
       }}
       extend={{
-        // extending the default link tags
         link: [{ rel: "icon", href: "/favicon.ico" }],
-        // extending the default meta tags
         meta: [
           {
             name: "twitter:image",
-            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+            content: {}
           },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+          { name: "twitter:title", content: {title} },
           { name: "twitter:description", content: "Agent" },
         ],
       }}
