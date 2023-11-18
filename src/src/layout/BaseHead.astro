@@ -18,9 +18,9 @@ const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
       description={description}
       openGraph={{
         basic: {
-          title: {title},
+          title: title,
           type: "website",
-          image: {image},
+          image: image,
         }
       }}
       twitter={{
@@ -31,10 +31,10 @@ const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
         meta: [
           {
             name: "twitter:image",
-            content: {}
+            content: description
           },
-          { name: "twitter:title", content: {title} },
-          { name: "twitter:description", content: {description} },
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
         ],
       }}
     />
