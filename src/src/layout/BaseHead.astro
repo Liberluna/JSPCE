@@ -1,6 +1,6 @@
 ---
 //@ts-ignore
-import { SEO } from "astro-seo";
+import { SEO as AstroSEO } from "astro-seo";
 
 interface Props {
     title: string;
@@ -13,7 +13,7 @@ const prefix = "og: http://ogp.me/ns# website: http://ogp.me/ns/website#";
 
 ---
 <head prefix={prefix}>
-   <SEO
+   <AstroSEO
       title={title}
       description={description}
       openGraph={{
