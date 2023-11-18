@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jspce.ame-x.net/sitemap-index.xml
