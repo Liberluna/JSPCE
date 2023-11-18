@@ -11,7 +11,7 @@ const { title, description, image } = Astro.props as Props;
 
 ---
 <html lang="ja">
-    <BaseHead title={title ?? ""} description={description ?? ""} image={image} />
+    <BaseHead title={title ?? ""} description={description ?? ""} image={image ?? ""} />
     <body>
         <div id="__next" style={{ display: "contents" }}>
             <slot />
