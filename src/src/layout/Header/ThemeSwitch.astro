@@ -38,5 +38,7 @@
             localStorage.setItem("theme", currentTheme);
             switchIcon.setAttribute("src", sunImage);
         }
+
+        window.dispatchEvent(new Event("themeChanged"));
     })
 </script>

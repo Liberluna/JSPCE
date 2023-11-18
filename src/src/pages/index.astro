@@ -7,7 +7,7 @@ import Layout from '../layout/Layout.astro';
 	<div style={{
 		background: "url('/background.png')",
 		backgroundSize: "cover",
-	}} class="min-h-screen flex items-center justify-center">
+	}} class="min-h-screen flex items-center justify-center" id="hero">
 
 	<div>
 		<div class="text-3xl font-bold">Hello JavaScriptist 👋</div>
@@ -15,3 +15,18 @@ import Layout from '../layout/Layout.astro';
 
 	</div>
 </Layout>
+
+<script>
+	window.addEventListener("themeChanged", () => {
+		const currentTheme = localStorage.getItem("theme") || "light";
+		const hero = document.getElementById("hero");
+
+		if (currentTheme === "dark") {
+			hero.style.background = "url('/background.png')";
+			hero.style.backgroundSize = "cover";
+		}else {
+			hero.style.background = "url('/background-dark.png')";
+			hero.style.backgroundSize = "cover";
+		}
+	})
+</script>
