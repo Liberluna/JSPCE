@@ -24,10 +24,10 @@ const menus = [
         }} src="/favicon.png" alt="Logo" class="w-[75px] h-[75px] shadow" loading="lazy" decoding="async" fetchpriority="high" width="75" height="75" />
     </div>
     <div class="flex items-center gap-4 space-x-4">
-        <div class="flex items-center gap-4 space-x-4 mr-1">
+        <div class="flex items-center md:gap-4 md:space-x-4 md:mr-1">
             {
                 menus.map((menu) => (
-                    <a href={menu.path} class="text-gray-800 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-300 bg-[#FFFFFF66] dark:bg-[#00010E33] rounded-lg px-2 py-1 transition duration-150" >{menu.name}</a>
+                    <a href={menu.path} class="text-xs text-gray-800 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-300 bg-[#FFFFFF66] dark:bg-[#00010E33] rounded-lg px-2 py-1 transition duration-150" >{menu.name}</a>
                 ))
             }
         </div>
