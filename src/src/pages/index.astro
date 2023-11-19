@@ -5,11 +5,11 @@ import Layout from '../layout/Layout.astro';
 
 <Layout>
 	<div style={{
-		background: "url('/background.png')",
+		background: "url('/background-dark.png')",
 		backgroundSize: "cover",
 	}} class="min-h-screen flex items-center justify-center" id="hero">
 
-	<div>
+	<div class="scale-150 md:scale-[1]">
 		<div class="text-5xl md:text-4xl font-ultrabold font-mont">Hello JavaScriptist 👋</div>
 		<h1 class="text-xl md:text-lg">JavaScript Professional Certification Examination</h1>
 		<div class="hidden">
@@ -17,7 +17,7 @@ import Layout from '../layout/Layout.astro';
 			<h3>JavaScript 資格 試験</h3>
 		</div>
 		<div class="flex items-center justify-center gap-4 space-x-4 mt-[2rem]">
-			<a href="#" class="bg-[#E0234E] dark:bg-[#E0234E] font-mont text-2xl md:text-xl text-white rounded-lg px-3 py-2 transition duration-150">Get Started</a>
+			<a href="/about" class="bg-[#E0234E] dark:bg-[#E0234E] font-mont text-2xl md:text-xl text-white rounded-lg px-3 py-2 transition duration-150">Get Started</a>
 		</div>
 	</div>
 	</div>
@@ -29,10 +29,10 @@ import Layout from '../layout/Layout.astro';
 		const hero = document.getElementById("hero");
 
 		if (currentTheme === "dark") {
-			hero.style.background = "url('/background.png')";
+			hero.style.background = "url('/background-dark.png')";
 			hero.style.backgroundSize = "cover";
 		}else {
-			hero.style.background = "url('/background-dark.png')";
+			hero.style.background = "url('/background-light.png')";
 			hero.style.backgroundSize = "cover";
 		}
 	})
