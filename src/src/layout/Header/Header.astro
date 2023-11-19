@@ -1,7 +1,12 @@
 ---
 import ThemeSwitch from './ThemeSwitch.astro';
 
-const menus = [
+type Menu = {
+    name: string;
+    path: string;
+}[];
+
+const menus: Menu = [
     {
         name: "Home",
         path: "/",
