@@ -9,6 +9,11 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   integrations: [react(), tailwind(), sitemap()],
   output: "server",
-  adapter: cloudflare(),
-  
+  adapter: cloudflare({
+    routes: {
+      exclude: [
+        "./dist/**/*",
+      ]
+    }
+  }),
 });
