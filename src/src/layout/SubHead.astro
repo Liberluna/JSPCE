@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 
-const preFetchList: string[] = ["/background-dark.png", "/background-light.png"];
+const preLoadList: string[] = ["/background-dark.png", "/background-light.png"];
 
 ---
 <ViewTransitions />
@@ -9,8 +9,8 @@ const preFetchList: string[] = ["/background-dark.png", "/background-light.png"]
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Inter:wght@300;400&family=Montserrat:wght@800&display=swap" rel="stylesheet">
 {
-    preFetchList.map((path) => {
-        return <link rel="prefetch" href={path} />
+    preLoadList.map((path) => {
+        return <link rel="preload" href={path} as="image">
     })
 }
 <meta name="renderDate" content={Date.now().toLocaleString()} />
