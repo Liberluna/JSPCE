@@ -1,5 +1,6 @@
 ---
 import ThemeSwitch from './ThemeSwitch.astro';
+import Logo from './Logo.astro';
 
 type Menu = {
     name: string;
@@ -23,11 +24,7 @@ const menus: Menu = [
 
 ---
 <header class="fixed top-0 w-full z-50 font-mont flex items-center justify-between p-4">
-    <div>
-        <img style={{
-            filter: "drop-shadow(0 0 10px rgba(133, 133, 133, 0.5))",
-        }} src="/favicon.png" alt="Logo" class="w-[75px] h-[75px] shadow" loading="lazy" decoding="async" fetchpriority="high" width="75" height="75" />
-    </div>
+    <Logo />
     <div class="flex items-center gap-4 space-x-4">
         <div class="flex items-center md:gap-4 md:space-x-4 md:mr-1">
             {
