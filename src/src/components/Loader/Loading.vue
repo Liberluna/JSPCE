@@ -16,7 +16,7 @@ if (isIn("client")) {
   setTimeout(() => {
     removeLoader();
     localStorage.setItem("loaded", "loaded");
-  }, 1000);
+  }, 500);
 }
 </script>
 
