@@ -1,0 +1,29 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+<Layout title="404 - JSPCE">
+    <div class="w-full min-h-screen main-view">
+        <h1>404 - Page Not Found</h1>
+        <h2>Rendered at {new Date().toLocaleString()}</h2>
+    </div>
+</Layout>
+
+<style scoped>
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .main-view {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
