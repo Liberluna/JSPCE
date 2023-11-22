@@ -1,11 +1,19 @@
-<script setup>
+<script>
+import { ref, onMounted } from 'vue';
 import { Prism } from "prismjs";
 import "prismjs/components/prism-javascript";
-import { onMounted } from "vue";
 import { isIn } from "../../utils/isIn";
 
-onMounted(() => {
-    if (isIn("client")) {
+export default {
+  props: {
+    path: String
+  },
+  setup(props) {
+    const code = ref('');
+    const result = ref('');
+
+    onMounted(() => {
+      if (isIn("client")) {
         const prismcss = document.createElement("link");
         prismcss.setAttribute("rel", "stylesheet");
         prismcss.setAttribute("type", "text/css");
@@ -14,26 +22,27 @@ onMounted(() => {
             "/styles/prism.css"
         )
         document.head.appendChild(prismcss);
-    }  
-    if (Prism) {
+      }  
+      if (Prism) {
         Prism.highlightAll();
-    }
-});
+      }
 
-const props = defineProps({
-    path: String
-});
-
-const code = `
+      code.value = `
 fetch("${props.path}").then(response => {
     const path = new URL(response.url).pathname;
     const status = response.status;
     console.log(\`"\${path}" : \${status}\`);
 })
 `;
+      result.value = `"${props.path}" : 404`
+    });
 
-const result = `"${props.path}" : 404`
-
+    return {
+      code,
+      result
+    }
+  }
+}
 </script>
 
 <template>
