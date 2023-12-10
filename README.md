@@ -5,11 +5,12 @@ A test that can be taken on the web to test your understanding of JavaScript and
 
 Currently free of charge (one-day interval required to take the test)
 
-https://jspce.ame-x.net
+https://jspce.vercel.app/
 
 ![Hero](/assets/JSPCE-Hero.png)
 
 ## Level
+There are three test levels available, and you can choose the level that is best suited for you.
 
 - Standard
 - Advanced
